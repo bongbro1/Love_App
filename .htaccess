@@ -1,0 +1,9 @@
+# Bật mod_rewrite
+RewriteEngine On
+
+# Nếu đường dẫn KHÔNG trỏ đến file hoặc thư mục thật
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# → Thì rewrite request vào thư mục public/
+RewriteRule ^(.*)$ public/$1 [L]

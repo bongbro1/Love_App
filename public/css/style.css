@@ -1,0 +1,72 @@
+/* public/css/style.css */
+
+/* Navbar shadow transition */
+#navbar {
+  transition: all 0.3s ease;
+}
+
+
+/* Mobile menu slide animation */
+@keyframes slideDown {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.animate-slideDown {
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Logo hover bounce */
+.logo-heart:hover {
+  animation: bounce 0.6s;
+}
+
+/* Tailwind bounce keyframe fallback */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Mobile menu links hover */
+#mobile-menu a:hover {
+  background-color: #fce7f3; /* bg-pink-50 */
+  transition: background-color 0.3s ease;
+}
+
+/* Button pulse animation */
+.animate-pulse-btn {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+
+
+/* Heart styles */
+.heart {
+  position: absolute;
+  width: 40px;  /* thay vì 20px */
+  height: 40px;
+  background-color: #f472b6;
+  clip-path: polygon(
+    50% 0%, 61% 15%, 75% 15%, 82% 28%, 100% 50%, 
+    82% 72%, 75% 85%, 61% 85%, 50% 100%, 
+    39% 85%, 25% 85%, 18% 72%, 0 50%, 18% 28%, 
+    25% 15%, 39% 15%
+  );
+  opacity: 0.6;
+  animation: float 10s linear infinite; /* tăng thời gian */
+}
+
+/* Different starting positions & speeds */
+.float-heart-1 { left: 10%; top: 80%; animation-duration: 8s; }
+.float-heart-2 { left: 30%; top: 85%; animation-duration: 10s; }
+.float-heart-3 { left: 50%; top: 82%; animation-duration: 12s; }
+.float-heart-4 { left: 70%; top: 88%; animation-duration: 9s; }
+
+@keyframes float {
+  0% { transform: translateY(100%) scale(0.5); opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-300%) scale(1); opacity: 0; } /* bay xa hơn */
+}
