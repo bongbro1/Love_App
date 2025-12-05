@@ -45,7 +45,7 @@ Ví dụ kết quả:
 Clone bằng Git:
 
 ``` bash
-git clone <repository-url> C:\xampp\htdocs\love-app
+git clone https://github.com/bongbro1/Love_App C:\xampp\htdocs\love-app
 ```
 
 ------------------------------------------------------------------------
@@ -69,24 +69,16 @@ trong `composer.json`
 
 ------------------------------------------------------------------------
 
-## ⚙️ 4. Cấu Hình File .env
-
-Nếu dự án có file mẫu `.env.example`, tạo file `.env`:
-
-``` bash
-copy .env.example .env
-```
+## ⚙️ 4. Cấu Hình File love-app/config/database.php
 
 Chỉnh lại các thông số:
 
-``` env
-APP_ENV=local
-APP_URL=http://localhost/love-app
-
-DB_HOST=localhost
-DB_NAME=loveapp
-DB_USER=root
-DB_PASS=
+```
+$host = '127.0.0.1';
+$db   = 'love-app';
+$user = 'root';
+$pass = '';
+$charset = 'utf8mb4';
 ```
 
 ------------------------------------------------------------------------
@@ -102,32 +94,15 @@ DB_PASS=
 ```
     loveapp
 
-3.  Import file SQL (nếu có):
-
-```{=html}
-<!-- -->
-```
-    database.sql
+3.  Import file SQL để trong thư mục love-app:
+    love-app.sql
 
 ------------------------------------------------------------------------
 
 ## ▶️ 6. Chạy Ứng Dụng
-
-### 🔥 Cách 1: Chạy bằng XAMPP
-
 -   Bật **Apache**
 -   Truy cập:
-
-```{=html}
-<!-- -->
-```
-    http://localhost/love-app
-
-### 🔥 Cách 2: Nếu dự án dùng framework có server dev (Laravel):
-
-``` bash
-php artisan serve
-```
+    http://localhost/love-app/public
 
 ------------------------------------------------------------------------
 
