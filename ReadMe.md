@@ -88,11 +88,7 @@ $charset = 'utf8mb4';
 1.  Mở phpMyAdmin:
     -   http://localhost/phpmyadmin
 2.  Tạo database:
-
-```{=html}
-<!-- -->
-```
-    loveapp
+    love-app
 
 3.  Import file SQL để trong thư mục love-app:
     love-app.sql
